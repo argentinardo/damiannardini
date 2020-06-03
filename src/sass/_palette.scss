@@ -1,0 +1,14 @@
+$primary: #1A2B35;
+$primary-light: lighten($primary, 15%); 
+$primary-dark: darken($primary, 15%); 
+$secondary: #32A0FF;
+$third: #CDCFDF;
+$fourth: #EF935A;
+
+/* gray scale*/
+
+$lighter-gray : #F1F1F1; 
+$gray-1: darken($lighter-gray, 15%);
+$gray-2: darken($gray-1, 15%);
+$gray-3: darken($gray-2, 15%);
+$darker-gray : darken($gray-3, 15%);
