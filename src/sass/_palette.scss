@@ -1,14 +1,14 @@
-$primary: #1A2B35;
-$primary-light: lighten($primary, 15%); 
-$primary-dark: darken($primary, 15%); 
-$secondary: #32A0FF;
-$third: #CDCFDF;
-$fourth: #EF935A;
+$primary: hsl(202, 34%, 15%);
+$primary--light: lighten($primary, 15%); 
+$primary--dark: darken($primary, 15%); 
+$secondary: hsl(208, 100%, 60%);
+$third: hsl(233, 22%, 84%);
+$fourth: hsl(23, 82%, 65%);
 
 /* gray scale*/
 
-$lighter-gray : #F1F1F1; 
-$gray-1: darken($lighter-gray, 15%);
-$gray-2: darken($gray-1, 15%);
-$gray-3: darken($gray-2, 15%);
-$darker-gray : darken($gray-3, 15%);
+$gray--lighter : hsl(0, 0%, 95%); 
+$gray-1: darken($gray--lighter, 20%);
+$gray-2: darken($gray-1, 20%);
+$gray-3: darken($gray-2, 20%);
+$gray--darker : darken($gray-3, 20%);
