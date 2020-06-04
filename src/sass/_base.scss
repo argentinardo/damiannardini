@@ -1,3 +1,9 @@
+html {
+    font-size: $font-size;
+}
 body {
+    font-size: $font-size;
     background-color: $primary--light;
+    font-family: $main-font;
+    color: $fourth;
 }

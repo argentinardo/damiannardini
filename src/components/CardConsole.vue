@@ -21,12 +21,12 @@ export default {
 <style lang="scss">
 .card {
   background-color: $gray--darker;
-  width: 33%;
-  height: 30vh;
+  width: calcRem(360px);
   margin: auto;
   border-radius: 3px;
 }
 .card__paragraph {
-  color: $gray--lighter;
+  padding: 1rem;
+  font-size: calcRem(14px);
 }
 </style>
