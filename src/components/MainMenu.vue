@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div class="main-menu" id="nav">
     <router-link to="/">Home </router-link>
     <router-link to="/AboutMe">Acerca de mi </router-link>
     <router-link to="/Drawing">Ilustraciones </router-link>
@@ -14,4 +14,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.main-menu {
+  display: none;
+}
+</style>
