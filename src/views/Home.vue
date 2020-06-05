@@ -1,8 +1,38 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
     <main-menu></main-menu>
-    <card-console></card-console>
+    <card-console :paragraph="true">
+      <template slot="paragraph">
+        Hola;
+        Aquí podés encontrar información sobre mis trabajos como front end / UI developer y también, algunas ilustraciones ya que es mi otra pasión.<br />
+        Gracias por pasar.<br />
+        Damián.
+      </template>
+    </card-console>
+        <card-console :paragraph="true">
+      <template slot="paragraph">
+        Hola;
+        Aquí podés encontrar información sobre mis trabajos como front end / UI developer y también, algunas ilustraciones ya que es mi otra pasión.<br />
+        Gracias por pasar.<br />
+        Damián.
+      </template>
+    </card-console>
+        <card-console :paragraph="true">
+      <template slot="paragraph">
+        Hola;
+        Aquí podés encontrar información sobre mis trabajos como front end / UI developer y también, algunas ilustraciones ya que es mi otra pasión.<br />
+        Gracias por pasar.<br />
+        Damián.
+      </template>
+    </card-console>
+        <card-console :paragraph="true">
+      <template slot="paragraph">
+        Hola;
+        Aquí podés encontrar información sobre mis trabajos como front end / UI developer y también, algunas ilustraciones ya que es mi otra pasión.<br />
+        Gracias por pasar.<br />
+        Damián.
+      </template>
+    </card-console>
   </div>
 </template>
 
