@@ -33,19 +33,22 @@ export default {
   height: $chipHeight;
   border-bottom-left-radius: $chipHeight;
   border-top-left-radius: $chipHeight;
+  border-top-right-radius: calcRem(6px);
+  border-bottom-right-radius: calcRem(6px);
   align-items: center;
   margin: 0 0 calcRem(16px) 0;
   .chip__amount {
     display: flex;
     width: calcRem(26px);
     text-align: center;
-    border: aliceblue solid calcRem(3px);
+    border: $secondary solid calcRem(3px);
     height: calcRem(26px);
     align-items: center;
     justify-content: center;
     border-radius: calcRem(26px);
     margin: calcRem(3px) calcRem(3px) calcRem(3px) calcRem(2px);
     font-size: calcRem(12px);
+    font-weight: 800;
   }
   .chip__text {
     margin: auto;
