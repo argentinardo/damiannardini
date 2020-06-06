@@ -6,14 +6,14 @@
     <p v-if="paragraph" class="card__paragraph">
       <slot name="paragraph"></slot>
     </p>
-    <slot v-if="skills" name="skills"></slot>
+    <slot v-if="chips" name="chips"></slot>
   </div>
 </template>
 
 <script>
 export default {
   name: "card",
-  props: ["title", "paragraph", "skills"]
+  props: ["title", "paragraph", "chips"]
 };
 </script>
 
@@ -24,11 +24,13 @@ export default {
   margin: 0 auto calcRem(8px);
   border-radius: calcRem(3px);
   padding: calcRem(16px) calcRem(16px) calcRem(25px) calcRem(16px);
+  display: flex;
+  flex-direction: column;
 }
 .card__title {
   font-size: calcRem(16px);
   color: $secondary--light;
-  margin: 0;
+  margin: 0 0 calcRem(16px) 0;
   font-weight: 400;
 }
 .card__paragraph {
