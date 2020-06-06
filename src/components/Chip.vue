@@ -3,7 +3,7 @@
     <div class="chip__amount">{{ amount }}</div>
     <p class="chip__text">{{ text }}</p>
     <div class="chip__icon">
-      <img :src="getImgUrl()" />
+      <img class="chip__img" :src="getImgUrl()" />
     </div>
   </div>
 </template>
@@ -13,16 +13,16 @@ export default {
   name: "chip",
   data() {
     return {
-      chipText: String,
-    }
+      chipText: String
+    };
   },
   methods: {
     getImgUrl() {
-      return require(`../assets/images/icons/chips/icon-${this.icon}.svg`)
+      return require(`../assets/images/icons/chips/icon-${this.icon}.svg`);
     }
   },
   props: ["amount", "text", "icon"]
-}
+};
 </script>
 
 <style lang="scss">
@@ -49,8 +49,13 @@ export default {
   }
   .chip__text {
     margin: auto;
+    font-size: calcRem(16px);
   }
   .chip__icon {
+    height: calcRem(32px);
+  }
+  .chip__img {
+    width: calcRem(32px);
     height: calcRem(32px);
   }
 }
