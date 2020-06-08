@@ -1,6 +1,6 @@
 <template>
   <div class="chip">
-    <div class="chip__amount">{{ amount }}</div>
+    <ChipAmount :amount="amount"></ChipAmount>
     <p class="chip__text">{{ text }}</p>
     <div class="chip__icon">
       <img class="chip__img" :src="getImgUrl()" />
@@ -9,8 +9,10 @@
 </template>
 
 <script>
+import ChipAmount from "./ChipAmount.vue";
 export default {
   name: "chip",
+  components: { ChipAmount },
   data() {
     return {
       chipText: String
@@ -37,29 +39,40 @@ export default {
   border-bottom-right-radius: calcRem(6px);
   align-items: center;
   margin: 0 0 calcRem(16px) 0;
-  .chip__amount {
-    display: flex;
-    width: calcRem(26px);
-    text-align: center;
-    border: $secondary solid calcRem(3px);
-    height: calcRem(26px);
-    align-items: center;
-    justify-content: center;
-    border-radius: calcRem(26px);
-    margin: calcRem(3px) calcRem(3px) calcRem(3px) calcRem(2px);
-    font-size: calcRem(12px);
-    font-weight: 800;
-  }
-  .chip__text {
-    margin: auto;
-    font-size: calcRem(16px);
-  }
-  .chip__icon {
-    height: calcRem(32px);
-  }
-  .chip__img {
-    width: calcRem(32px);
-    height: calcRem(32px);
-  }
+}
+.chip__amount {
+  position: relative;
+}
+.amount__number {
+  display: flex;
+  width: calcRem(26px);
+  text-align: center;
+  height: calcRem(26px);
+  align-items: center;
+  justify-content: center;
+  margin: calcRem(3px) calcRem(3px) calcRem(3px) calcRem(2px);
+  font-size: calcRem(12px);
+  font-weight: 800;
+}
+.amount__chart {
+  stroke: $secondary;
+  fill: none;
+  stroke-width: calcRem(2px);
+  position: absolute;
+  top: calcRem(2px);
+  left: calcRem(1px);
+  width: calcRem(28px);
+  height: calcRem(28px);
+}
+.chip__text {
+  margin: auto;
+  font-size: calcRem(16px);
+}
+.chip__icon {
+  height: calcRem(32px);
+}
+.chip__img {
+  width: calcRem(32px);
+  height: calcRem(32px);
 }
 </style>
