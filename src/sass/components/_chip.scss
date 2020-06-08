@@ -1,0 +1,47 @@
+.chip {
+  $chipHeight: calcRem(32px);
+  border: calcRem(1px) solid $fourth;
+  display: flex;
+  height: $chipHeight;
+  border-bottom-left-radius: $chipHeight;
+  border-top-left-radius: $chipHeight;
+  border-top-right-radius: calcRem(6px);
+  border-bottom-right-radius: calcRem(6px);
+  align-items: center;
+  margin: 0 0 calcRem(16px) 0;
+}
+.chip__amount {
+  position: relative;
+}
+.amount__number {
+  display: flex;
+  width: calcRem(26px);
+  text-align: center;
+  height: calcRem(26px);
+  align-items: center;
+  justify-content: center;
+  margin: calcRem(3px) calcRem(3px) calcRem(3px) calcRem(2px);
+  font-size: calcRem(12px);
+  font-weight: 800;
+}
+.amount__chart {
+  stroke: $secondary;
+  fill: none;
+  stroke-width: calcRem(2px);
+  position: absolute;
+  top: calcRem(2px);
+  left: calcRem(1px);
+  width: calcRem(28px);
+  height: calcRem(28px);
+}
+.chip__text {
+  margin: auto;
+  font-size: calcRem(16px);
+}
+.chip__icon {
+  height: calcRem(32px);
+}
+.chip__img {
+  width: calcRem(32px);
+  height: calcRem(32px);
+}
