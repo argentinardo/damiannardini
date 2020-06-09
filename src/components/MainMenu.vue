@@ -1,6 +1,8 @@
 <template>
   <div class="main-menu">
-    <div class="main-menu--closed"></div>
+    <div class="main-menu--closed">
+      <img src="@/assets/images/icons/menu.svg" alt="menu" />
+    </div>
     <div class="main-menu--opened" id="nav">
       <router-link to="/">Home </router-link>
       <router-link to="/AboutMe">Acerca de mi </router-link>
@@ -19,7 +21,6 @@ export default {
 
 <style lang="scss">
 .main-menu--closed {
-  background-image: url(../assets/images/icons/menu.svg);
   width: calcRem(25px);
   height: calcRem(20px);
   display: block;

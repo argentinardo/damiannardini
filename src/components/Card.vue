@@ -16,26 +16,3 @@ export default {
   props: ["title", "paragraph", "chips"]
 };
 </script>
-
-<style lang="scss">
-.card {
-  background-color: $gray--darker;
-  width: calcRem(360px);
-  margin: 0 auto calcRem(8px);
-  border-radius: calcRem(3px);
-  padding: calcRem(16px) calcRem(16px) calcRem(25px) calcRem(16px);
-  display: flex;
-  flex-direction: column;
-}
-.card__title {
-  font-size: calcRem(16px);
-  color: $gray--lighter;
-  margin: 0 0 calcRem(16px) 0;
-  font-weight: 400;
-}
-.card__paragraph {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: calcRem(14px);
-}
-</style>
