@@ -1,5 +1,15 @@
 <template>
   <div class="hero">
+    <video
+      autoplay
+      loop
+      muted
+      poster="@/assets/images/hero-bg.jpg"
+      class="hero__background"
+    >
+      <source src="@/assets/images/hero-bg.webm" type="video/webm" />
+      <source src="@/assets/images/hero-bg.mp4" type="video/mp4" />
+    </video>
     <div class="hero__top">
       <main-menu class="hero__menu"></main-menu>
       <div class="hero__avatar"></div>
@@ -29,7 +39,6 @@ export default {
 
 <style lang="scss">
 .hero {
-  background-image: url(../assets/images/hero__background.gif);
   width: calcRem(376px);
   height: calcRem(184px);
   margin: 0 auto calcRem(8px);
@@ -49,6 +58,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: relative;
+}
+.hero__background {
+  position: absolute;
 }
 .hero__top {
   position: relative;
@@ -61,6 +74,7 @@ export default {
   background-image: url(../assets/images/avatar--notebook.svg);
   position: relative;
   top: calcRem(56px);
+  z-index: 1;
 }
 .hero__title {
   color: $secondary;
