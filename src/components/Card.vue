@@ -29,7 +29,7 @@ export default {
 }
 .card__title {
   font-size: calcRem(16px);
-  color: $secondary--light;
+  color: $gray--lighter;
   margin: 0 0 calcRem(16px) 0;
   font-weight: 400;
 }

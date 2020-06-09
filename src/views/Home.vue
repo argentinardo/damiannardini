@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <main-menu></main-menu>
+    <hero></hero>
     <card :paragraph="true">
       <template slot="paragraph">
         Hola; Aquí puedes encontrar información sobre mis trabajos como front
@@ -82,14 +82,14 @@
 <script>
 import Card from "@/components/Card.vue";
 import Chip from "@/components/Chip.vue";
-import MainMenu from "@/components/MainMenu.vue";
+import Hero from "@/components/Hero.vue";
 
 export default {
   name: "Home",
   components: {
     Card,
-    MainMenu,
-    Chip
+    Chip,
+    Hero
   }
 };
 </script>
