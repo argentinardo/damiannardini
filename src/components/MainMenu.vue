@@ -1,31 +1,29 @@
 <template>
   <div class="main-menu">
-    <div class="main-menu--closed">
+    <div v-if="!openState" class="main-menu__icon">
       <img src="@/assets/images/icons/menu.svg" alt="menu" />
     </div>
-    <div class="main-menu--opened" id="nav">
-      <router-link to="/">Home </router-link>
-      <router-link to="/AboutMe">Acerca de mi </router-link>
-      <router-link to="/Drawing">Ilustraciones </router-link>
-      <router-link to="/Experience">Experiencia </router-link>
-      <router-link to="/Contacto">Contacto </router-link>
+    <div v-else class="main-menu--opened" id="nav">
+      <router-link to="/" class="main-menu__item">Home </router-link>
+      <router-link to="/AboutMe" class="main-menu__item"
+        >Acerca de mi
+      </router-link>
+      <router-link to="/Drawing" class="main-menu__item"
+        >Ilustraciones
+      </router-link>
+      <router-link to="/Experience" class="main-menu__item"
+        >Experiencia
+      </router-link>
+      <router-link to="/Contacto" class="main-menu__item"
+        >Contacto
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "MainMenu"
+  name: "MainMenu",
+  props: ["openState"]
 };
 </script>
-
-<style lang="scss">
-.main-menu--closed {
-  width: calcRem(25px);
-  height: calcRem(20px);
-  display: block;
-}
-.main-menu--opened {
-  display: none;
-}
-</style>

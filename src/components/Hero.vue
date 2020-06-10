@@ -11,8 +11,8 @@
         <source src="@/assets/images/hero-bg.webm" type="video/webm" />
         <source src="@/assets/images/hero-bg.mp4" type="video/mp4" />
       </video>
-      <div class="hero__top">
-        <main-menu class="hero__menu"></main-menu>
+      <div @click="openClose" class="hero__top">
+        <main-menu :openState="openState" class="hero__menu"></main-menu>
         <div class="hero__avatar">
           <img
             src="@/assets/images/avatar--notebook.svg"
@@ -40,8 +40,15 @@ export default {
       title: "heroTitle",
       subtitle: "heroSubtitle",
       avatar: "heroAvatar",
-      dialog: "dialogAvatar"
+      dialog: "dialogAvatar",
+      openState: false
     };
+  },
+  methods: {
+    openClose: function() {
+      console.log("mostrar ocultar");
+      this.openState = !this.openState;
+    }
   }
 };
 </script>
