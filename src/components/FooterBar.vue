@@ -1,17 +1,18 @@
 <template>
   <div class="footer-bar">
     <span class="footer-bar__site-logo">
-      <a href="/" class="footer-bar__site-link">
+      <router-link to="/" class="footer-bar__site-link">
         <img src="@/assets/images/icons/logo.svg" alt="Damian Nardini" />
-      </a>
+      </router-link>
     </span>
     <span class="footer-bar__social-logos">
-      <a href="/Contact" class="footer-bar__social-link">
+      <router-link to="/Contact" class="footer-bar__social-link">
         <img
           class="footer-bar__social-icon"
           src="@/assets/images/icons/social/social_email.svg"
           alt="e-mail"
-      /></a>
+        />
+      </router-link>
       <a
         href="https://github.com/argentinardo/damiannardini"
         class="footer-bar__social-link"
