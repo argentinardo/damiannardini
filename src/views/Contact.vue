@@ -1,6 +1,5 @@
 <template>
   <div class="contact">
-    <hero></hero>
     <card :paragraph="true">
       <template slot="paragraph">
         Contacto
@@ -11,13 +10,11 @@
 
 <script>
 import Card from "@/components/Card.vue";
-import Hero from "@/components/Hero.vue";
 
 export default {
   name: "Contacto",
   components: {
-    Card,
-    Hero
+    Card
   }
 };
 </script>

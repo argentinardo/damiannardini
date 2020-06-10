@@ -1,9 +1,18 @@
 <template>
   <div id="app">
+    <hero></hero>
     <router-view />
+    <footer-bar></footer-bar>
   </div>
 </template>
-
-<style lang="scss">
-@import url(/sass/main.scss);
-</style>
+<script>
+import Hero from "@/components/Hero.vue";
+import FooterBar from "@/components/FooterBar.vue";
+export default {
+  name: "Home",
+  components: {
+    Hero,
+    FooterBar
+  }
+};
+</script>

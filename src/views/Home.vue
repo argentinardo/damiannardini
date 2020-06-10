@@ -1,11 +1,10 @@
 <template>
   <div class="home">
-    <hero></hero>
-    <card :paragraph="true">
+    <card :paragraph="true" title="true">
+      <template slot="title">Hola;</template>
       <template slot="paragraph">
-        Hola; Aquí puedes encontrar información sobre mis trabajos como front
-        end / UI developer y también, algunas ilustraciones ya que es mi otra
-        pasión.<br />
+        Aquí puedes encontrar información sobre mis trabajos como front end / UI
+        developer y también, algunas ilustraciones ya que es mi otra pasión.<br />
         Gracias por pasar.<br />
         Damián.
       </template>
@@ -82,14 +81,12 @@
 <script>
 import Card from "@/components/Card.vue";
 import Chip from "@/components/Chip.vue";
-import Hero from "@/components/Hero.vue";
 
 export default {
   name: "Home",
   components: {
     Card,
-    Chip,
-    Hero
+    Chip
   }
 };
 </script>
