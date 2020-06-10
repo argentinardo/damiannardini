@@ -6,7 +6,7 @@
       </a>
     </span>
     <span class="footer-bar__social-logos">
-      <a href="/contact" class="footer-bar__social-link">
+      <a href="/Contact" class="footer-bar__social-link">
         <img
           class="footer-bar__social-icon"
           src="@/assets/images/icons/social/social_email.svg"
