@@ -1,0 +1,13 @@
+.title-sticky {
+  display: flex;
+  height: calcRem(64px);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-bottom: calcRem(16px);
+}
+.title-sticky__title {
+  font-family: $title-font;
+  font-size: calcRem(20px);
+}
