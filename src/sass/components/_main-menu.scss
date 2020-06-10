@@ -18,7 +18,10 @@
   left: 0;
   top: 0;
   flex-direction: column;
-  padding: calcRem(24px); 
+  padding-top: calcRem(0px);
+  padding-right: calcRem(24px);
+  padding-left: calcRem(24px);
+  padding-bottom: calcRem(24px);
 }
 .main-menu__item {
   width: 100%;

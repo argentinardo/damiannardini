@@ -7,36 +7,37 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "Bienvenidos",
     component: Home
   },
   {
     path: "/about-me",
-    name: "AboutMe",
+    name: "Sobre mi",
     component: () =>
       import(/* webpackChunkName: "aboutMe" */ "../views/AboutMe.vue")
   },
   {
     path: "/contact",
-    name: "Contact",
+    name: "Contacto",
     component: () =>
       import(/* webpackChunkName: "contact" */ "../views/Contact.vue")
   },
   {
     path: "/drawing",
-    name: "Drawing",
+    name: "Ilustraciones",
     component: () =>
       import(/* webpackChunkName: "drawing" */ "../views/Drawing.vue")
   },
   {
     path: "/experience",
-    name: "Experience",
+    name: "Experiencia",
     component: () =>
       import(/* webpackChunkName: "experience" */ "../views/Experience.vue")
   }
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes
 });
 

@@ -46,7 +46,6 @@ export default {
   },
   methods: {
     openClose: function() {
-      console.log("mostrar ocultar");
       this.openState = !this.openState;
     }
   }
