@@ -8,7 +8,7 @@
   border-top-right-radius: calcRem(6px);
   border-bottom-right-radius: calcRem(6px);
   align-items: center;
-  margin: 0 0 calcRem(16px) 0;
+  margin-top: calcRem(8px);
 }
 .chip__amount {
   position: relative;
@@ -36,7 +36,7 @@
 }
 .chip__text {
   margin: auto;
-  font-size: calcRem(16px);
+  font-size: calcRem(15px);
 }
 .chip__icon {
   height: calcRem(32px);
