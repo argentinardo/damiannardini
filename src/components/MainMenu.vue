@@ -16,6 +16,9 @@
         >Experiencia
       </router-link>
       <router-link to="/Contact" class="main-menu__item">Contacto </router-link>
+      <router-link to="/AboutWeb" class="main-menu__item"
+        >Acerca de esta web
+      </router-link>
     </div>
   </div>
 </template>
