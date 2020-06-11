@@ -1,7 +1,7 @@
 <template>
   <div class="about-me">
-    <card :paragraph="true">
-      <template slot="paragraph">
+    <card>
+      <p class="card__paragraph">
         Nací en Argentina, actualmente resido en Barcelona. Trabajo en
         tecnologías web desde hace más de 10 años actualmente como front-end /
         UI. Esto me exigió una constante capacitación tanto a cargo de las
@@ -15,7 +15,7 @@
           to="/Contact"
           >hablamos?</router-link
         >
-      </template>
+      </p>
     </card>
   </div>
 </template>

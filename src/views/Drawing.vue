@@ -1,9 +1,9 @@
 <template>
   <div class="Drawing">
-    <card :paragraph="true">
-      <template slot="paragraph">
+    <card>
+      <p class="card__paragraph">
         Ilustraciones
-      </template>
+      </p>
     </card>
   </div>
 </template>

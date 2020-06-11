@@ -1,9 +1,9 @@
 <template>
   <div class="contact">
-    <card :paragraph="true">
-      <template slot="paragraph">
+    <card>
+      <p class="card__paragraph">
         Contacto
-      </template>
+      </p>
     </card>
   </div>
 </template>
