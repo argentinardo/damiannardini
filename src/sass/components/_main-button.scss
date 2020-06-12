@@ -1,0 +1,19 @@
+.main-button {
+  display: flex;
+  height: calcRem(40px);
+  text-align: center;
+  font-family: $title-font;
+  background-color: $fourth;
+  font-size: calcRem(18px);
+  border-radius: calcRem(2px);
+  border-bottom: calcRem(3px) solid $fourth--dark;
+  align-items: center;
+  margin-top: calcRem(8px);
+  margin-bottom: calcRem(8px);
+}
+.main-button__link {
+  color: $gray--lighter;
+  text-decoration: none;
+  width: 100%;
+  line-height: calcRem(40px);
+}
