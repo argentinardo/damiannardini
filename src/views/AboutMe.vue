@@ -11,7 +11,7 @@
         animación 3D y tradicional. Cada nuevo proyecto es un desafío al cual me
         gusta abordar con mi experiencia e incursionando nuevas posibilidades.
         Siempre estoy abierto a nuevos retos,<router-link
-          class="about-me__link"
+          class="card__link"
           to="/Contact"
           >hablamos?</router-link
         >
@@ -30,8 +30,3 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-.about-me__link {
-  color: $third;
-}
-</style>

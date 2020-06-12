@@ -17,3 +17,13 @@
   margin-bottom: 0;
   font-size: calcRem(15px);
 }
+.card__link {
+  color: $third;
+}
+.card__emphasis {
+  font-size: calcRem(15px);
+  font-weight: 600;
+  line-height: calcRem(20px);
+  margin-left: calcRem(8px);
+  color: $fourth--light;
+}

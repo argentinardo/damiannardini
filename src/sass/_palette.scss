@@ -5,6 +5,7 @@ $secondary: hsl(208, 100%, 60%);
 $secondary--light: lighten($secondary, 15%); 
 $third: hsl(233, 22%, 84%);
 $fourth: hsl(23, 82%, 65%);
+$fourth--light: lighten($fourth, 15%); 
 
 /* gray scale*/
 
