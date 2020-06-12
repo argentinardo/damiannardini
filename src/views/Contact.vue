@@ -7,6 +7,7 @@
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        netlify
       >
         <label class="contact__label" for="">Nombre y apellidos*</label>
         <input
