@@ -7,6 +7,7 @@
   padding-right: calcRem(8px);
   color: $secondary;
   font-weight: 600;
+  background-color: $third--light;
   &:focus {
     outline: none;
   }
