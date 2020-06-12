@@ -1,9 +1,12 @@
 <template>
   <div class="contact">
     <card>
-      <p class="card__paragraph">
-        Contacto
-      </p>
+      <label class="contact__label" for="">Nombre y apellidos*</label>
+      <input class="contact__input contact__input-text" type="text" />
+      <label class="contact__label" for="">e-mail *</label>
+      <input class="contact__input contact__input-text" type="text" value="@" />
+      <label class="contact__label" for="">Mensaje</label>
+      <textarea class="contact__input contact__textarea" />
       <main-button text="Enviar" link="#"></main-button>
     </card>
   </div>
