@@ -6,6 +6,7 @@
         name="contact"
         method="POST"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <label class="contact__label" for="">Nombre y apellidos*</label>
         <input
@@ -38,27 +39,6 @@
       <p class="card__paragraph card__paragraph--centered">Hasta entonces.</p>
       <main-button text="Volver" link="#"></main-button>
     </card>
-
-    <form
-      name="ask-question"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
-      <input type="hidden" name="form-name" value="ask-question" />
-      <label v-for="(panelist, index) in panelists" :key="index">
-        <input
-          type="radio"
-          name="panelist"
-          :value="panelist"
-          @input="ev => updatePanelist"
-          :checked="panelist === currentPanelist"
-        />
-        <span>{{ panelist }}</span>
-      </label>
-      ...
-      <button>Submit</button>
-    </form>
   </div>
 </template>
 
@@ -67,21 +47,10 @@ import Card from "@/components/Card.vue";
 import MainButton from "@/components/MainButton.vue";
 
 export default {
-  name: "Contacto",
+  name: "Contact",
   components: {
     Card,
     MainButton
-  },
-  methods: {
-    updatePanelist(ev) {
-      this.currentPanelist = ev.target.value;
-    }
-  },
-  data() {
-    return {
-      panelists: ["damian", "nardini"],
-      currentPanelist: "damian"
-    };
   }
 };
 </script>
