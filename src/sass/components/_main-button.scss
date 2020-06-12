@@ -6,7 +6,7 @@
   background-color: $fourth;
   font-size: calcRem(18px);
   border-radius: calcRem(2px);
-  border-bottom: calcRem(3px) solid $fourth--dark;
+  box-shadow: 0 calcRem(3px) 0 $fourth--dark;
   align-items: center;
   margin-top: calcRem(8px);
   margin-bottom: calcRem(8px);
