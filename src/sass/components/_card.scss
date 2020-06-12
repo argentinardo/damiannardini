@@ -20,10 +20,16 @@
 .card__link {
   color: $third;
 }
+
+.card__cluster {
+  padding: calcRem(8px) calcRem(8px) calcRem(8px) calcRem(12px);
+  border-radius: calcRem(6px);
+  border: solid $fourth calcRem(1px);
+  font-size: calcRem(14px);
+}
 .card__emphasis {
   font-size: calcRem(15px);
   font-weight: 600;
   line-height: calcRem(20px);
-  margin-left: calcRem(8px);
   color: $fourth--light;
 }
