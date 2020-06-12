@@ -1,6 +1,9 @@
 .main-button {
   display: flex;
-  height: calcRem(40px);
+  align-items: center;
+}
+.main-button__link {
+  height: calcRem(37px);
   text-align: center;
   font-family: $title-font;
   background-color: $fourth;
@@ -10,10 +13,22 @@
   align-items: center;
   margin-top: calcRem(8px);
   margin-bottom: calcRem(8px);
-}
-.main-button__link {
   color: $gray--lighter;
-  text-decoration: none;
   width: 100%;
-  line-height: calcRem(40px);
+  border: none;
+  &:focus,
+  &:hover {
+    transition: all 0.1s;
+    margin-top: calcRem(6px);
+    outline: none;
+    box-shadow: 0 calcRem(5px) 0 $fourth--dark;
+    margin-bottom: calcRem(10px);
+    line-height: calcRem(37px);
+  }
+  &:active {
+    box-shadow: 0 calcRem(1px) 0 $fourth--dark;
+    line-height: calcRem(42px);
+    margin-bottom: calcRem(6px);
+    margin-top: calcRem(10px);
+  }
 }

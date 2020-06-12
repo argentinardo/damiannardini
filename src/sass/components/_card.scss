@@ -16,6 +16,9 @@
   margin-top: calcRem(8px);
   margin-bottom: 0;
   font-size: calcRem(15px);
+  &--centered {
+    text-align: center;;
+  }
 }
 .card__link {
   color: $third;
