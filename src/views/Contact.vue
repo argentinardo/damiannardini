@@ -3,7 +3,7 @@
     <card v-if="true">
       <form
         class="contact__form"
-        name="contact"
+        name="from-name"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
