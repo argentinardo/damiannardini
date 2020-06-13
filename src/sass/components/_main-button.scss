@@ -16,6 +16,7 @@
   color: $gray--lighter;
   width: 100%;
   border: none;
+  line-height: calcRem(37px);
   &:focus,
   &:hover {
     transition: all 0.1s;

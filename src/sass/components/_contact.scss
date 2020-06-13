@@ -27,7 +27,8 @@
 .contact__label {
   margin-top: calcRem(16px);
   margin-bottom: calcRem(8px);
-}
-.contact__label {
   color: $third--dark;
+  &--hidden {
+    display: none;
+  }
 }

@@ -9,6 +9,10 @@
         data-netlify-honeypot="bot-field"
         netlify
       >
+        <label class="contact__label--hidden hidden"
+          >Don't fill this out if you're human:
+          <input name="bot-field" />
+        </label>
         <label class="contact__label" for="">Nombre y apellidos*</label>
         <input
           class="contact__input contact__input-text"
