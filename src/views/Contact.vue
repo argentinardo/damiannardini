@@ -11,7 +11,8 @@
         Me comunicaré contigo a la brevedad.
       </p>
       <p class="card__paragraph card__paragraph--centered">Hasta entonces.</p>
-      <main-button text="Volver" link="#"></main-button>
+      <main-button type="submit" text="Volver" link="#"></main-button>
+      <button type="submit"></button>
     </card>
   </div>
 </template>
