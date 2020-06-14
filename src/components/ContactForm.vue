@@ -25,17 +25,20 @@
       class="contact__input contact__textarea"
       name="message"
     ></textarea>
-    <main-button text="Enviar"></main-button>
+    <!-- <main-button text="Enviar"></main-button> -->
+    <div class="main-button">
+      <button class="main-button__link">Enviar</button>
+    </div>
   </form>
 </template>
 
 <script>
-import MainButton from "@/components/MainButton.vue";
+// import MainButton from "@/components/MainButton.vue";
 
 export default {
   name: "ContactForm",
   components: {
-    MainButton
+    // MainButton
   }
 };
 </script>
