@@ -11,22 +11,18 @@
         Me comunicaré contigo a la brevedad.
       </p>
       <p class="card__paragraph card__paragraph--centered">Hasta entonces.</p>
-      <main-button type="submit" text="Volver" link="#"></main-button>
-      <button type="submit"></button>
+      <main-button type="submit" text="Volver"></main-button>
     </card>
   </div>
 </template>
-
 <script>
 import Card from "@/components/Card.vue";
-import MainButton from "@/components/MainButton.vue";
 import ContactForm from "@/components/ContactForm.vue";
 
 export default {
   name: "Contact",
   components: {
     Card,
-    MainButton,
     ContactForm
   }
 };

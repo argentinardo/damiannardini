@@ -1,13 +1,12 @@
 <template>
   <form
-    class="contact__form"
-    name="from-name"
-    method="POST"
+    name="web_message"
+    method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    netlify
+    class="contact__form"
   >
-    <input type="hidden" name="from-name" value="from-name" />
+    <input type="hidden" name="form-name" value="web_message" />
     <label class="contact__label--hidden hidden"
       >Don't fill this out if you're human:
       <input name="bot-field" />
@@ -26,6 +25,17 @@
       class="contact__input contact__textarea"
       name="message"
     ></textarea>
-    <main-button text="Enviar" role="" link="#" type="submit"></main-button>
+    <main-button text="Enviar"></main-button>
   </form>
 </template>
+
+<script>
+import MainButton from "@/components/MainButton.vue";
+
+export default {
+  name: "ContactForm",
+  components: {
+    MainButton
+  }
+};
+</script>
