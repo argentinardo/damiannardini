@@ -1,38 +1,14 @@
 <template>
   <div class="contact">
     <card v-if="true">
-      <form
-        class="contact__form"
-        name="from-name"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify
-      >
-        <input type="hidden" name="contact__form" value="contact__form" />
-        <label class="contact__label--hidden hidden"
-          >Don't fill this out if you're human:
-          <input name="bot-field" />
-        </label>
-        <label class="contact__label" for="">Nombre y apellidos*</label>
-        <input
-          class="contact__input contact__input-text"
+      <form name="simple-form" hidden method="post">
+        <input type="hidden" name="form-name" value="simple-form" /><input
+          type="text"
           name="name"
-          type="text"
         />
-        <label class="contact__label" for="">e-mail *</label>
-        <input
-          class="contact__input contact__input-text"
-          type="text"
-          value="@"
-          name="email"
-        />
-        <label class="contact__label" for="">Mensaje</label>
-        <textarea
-          class="contact__input contact__textarea"
-          name="message"
-        ></textarea>
-        <main-button text="Enviar" role="" link="#" type="submit"></main-button>
+        <input type="email" name="email" />
+        <input type="textarea" name="message" />
+        <button type="submit">Send</button>
       </form>
     </card>
     <card v-else>
