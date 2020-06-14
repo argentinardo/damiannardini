@@ -26,9 +26,7 @@
       name="message"
     ></textarea>
     <!-- <main-button text="Enviar"></main-button> -->
-    <div class="main-button">
       <button class="main-button__link">Enviar</button>
-    </div>
   </form>
 </template>
 
