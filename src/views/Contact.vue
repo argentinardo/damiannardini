@@ -18,8 +18,8 @@
 
 <script>
 import Card from "@/components/Card.vue";
-import ContactForm from "@/components/ContactForm.vue";
 import MainButton from "@/components/MainButton.vue";
+import ContactForm from "@/components/ContactForm.vue";
 
 export default {
   name: "Contact",
