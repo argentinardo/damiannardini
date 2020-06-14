@@ -1,15 +1,7 @@
 <template>
   <div class="contact">
     <card v-if="true">
-      <form name="simple-form" hidden method="post">
-        <input type="hidden" name="form-name" value="simple-form" /><input
-          type="text"
-          name="name"
-        />
-        <input type="email" name="email" />
-        <input type="textarea" name="message" />
-        <button type="submit">Send</button>
-      </form>
+      <contact-form></contact-form>
     </card>
     <card v-else>
       <p class="card__paragraph card__paragraph--centered">
@@ -26,13 +18,15 @@
 
 <script>
 import Card from "@/components/Card.vue";
+import ContactForm from "@/components/ContactForm.vue";
 import MainButton from "@/components/MainButton.vue";
 
 export default {
   name: "Contact",
   components: {
     Card,
-    MainButton
+    MainButton,
+    ContactForm
   }
 };
 </script>
