@@ -28,10 +28,18 @@
       <strong>We're sorry but Damian Nardini web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="radio" name="panelist" />
-      <textarea name="question"></textarea>
+    <form name="web_message" netlify netlify-honeypot="bot-field" hidden>
+      <input class="contact__input contact__input-text" name="name" type="text" />
+      <input
+      class="contact__input contact__input-text"
+      type="text"
+      value="@"
+      name="email"
+    />
+    <textarea
+      class="contact__input contact__textarea"
+      name="message"
+    ></textarea>
     </form>
     <!-- built files will be auto injected -->
   </body>
