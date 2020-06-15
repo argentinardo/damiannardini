@@ -11,7 +11,7 @@
 
 <script>
 import Card from "@/components/Card.vue";
-import MainButton from "@/components/MainButton.vue"
+import MainButton from "@/components/MainButton.vue";
 export default {
   name: "SubmissionFail",
   components: {

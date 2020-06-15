@@ -13,18 +13,25 @@
       <input name="bot-field" />
     </label>
     <label class="contact__label" for="">Nombre y apellidos*</label>
-    <input class="contact__input contact__input-text" name="name" type="text" />
+    <input
+      class="contact__input contact__input-text"
+      name="name"
+      type="text"
+      required
+    />
     <label class="contact__label" for="">e-mail *</label>
     <input
       class="contact__input contact__input-text"
-      type="text"
       value="@"
       name="email"
+      required
+      type="email"
     />
     <label class="contact__label" for="">Mensaje</label>
     <textarea
       class="contact__input contact__textarea"
       name="message"
+      required
     ></textarea>
     <main-button text="Enviar"></main-button>
   </form>
