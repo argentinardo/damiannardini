@@ -23,6 +23,20 @@ const routes = [
       import(/* webpackChunkName: "contact" */ "../views/Contact.vue")
   },
   {
+    path: "/thanks",
+    name: "success",
+    component: () =>
+      import(/* webpackChunkName: "Submission" */ "../views/ContactSuccess.vue")
+  },
+  {
+    path: "/404",
+    name: "fail",
+    component: () =>
+      import(
+        /* webpackChunkName: "SubmissionFail" */ "../views/ContactError.vue"
+      )
+  },
+  {
     path: "/drawing",
     name: "Ilustraciones",
     component: () =>
