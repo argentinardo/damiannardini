@@ -1,4 +1,6 @@
-# vuegit
+# Damian Nardini Web
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/61c0ab70-792e-4dba-b1d2-6f5fb24c5221/deploy-status)](https://app.netlify.com/sites/damiannardini/deploys)
 
 ## Project setup
 ```
