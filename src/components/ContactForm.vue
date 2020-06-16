@@ -5,7 +5,7 @@
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     class="contact__form"
-    action=""
+    action="/thanks"
   >
     <input type="hidden" name="form-name" value="web_message" />
     <label class="contact__label--hidden hidden"
