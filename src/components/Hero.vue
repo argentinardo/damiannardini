@@ -1,13 +1,7 @@
 <template>
   <div class="hero">
     <div class="hero__top--bg">
-      <video
-        autoplay
-        loop
-        muted
-        poster="@/assets/images/hero-bg.jpg"
-        class="hero__video"
-      >
+      <video autoplay loop muted class="hero__video">
         <source src="@/assets/images/hero-bg.webm" type="video/webm" />
         <source src="@/assets/images/hero-bg.mp4" type="video/mp4" />
       </video>
