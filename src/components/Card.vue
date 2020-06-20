@@ -1,11 +1,12 @@
 <template>
-  <div class="card">
+  <div class="card" :style="`flex-direction: ${flex}`">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "card"
+  name: "card",
+  props: ["flex"]
 };
 </script>
