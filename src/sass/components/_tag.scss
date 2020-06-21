@@ -1,0 +1,17 @@
+.tag {
+  border-radius: calcRem(6px);
+  border: solid calcRem(2px) $secondary;
+  color: $secondary;
+  padding: calcRem(8px);
+  margin: calcRem(8px);
+  font-weight: 600;
+  &:hover {
+    color: $fourth--light;
+    border: solid calcRem(2px) $fourth--light;
+    cursor: pointer;
+  }
+}
+.tag--active {
+  border: solid calcRem(2px) $fourth;
+  color: $fourth;
+}

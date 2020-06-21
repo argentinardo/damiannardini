@@ -5,6 +5,7 @@
   padding: calcRem(16px) calcRem(16px) calcRem(25px) calcRem(16px);
   display: flex;
   flex-direction: column;
+  flex-flow: wrap;
 }
 .card__title {
   font-size: calcRem(17px);

@@ -1,0 +1,9 @@
+.drawing__image {
+  align-self: center;
+  width: 100%;
+  margin-bottom: calcRem(16px);
+  border-radius: calcRem(4px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
