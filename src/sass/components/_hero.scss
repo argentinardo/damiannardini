@@ -11,13 +11,13 @@
   background-color: $primary;
   position: relative;
   box-shadow: 0 calcRem(1px) calcRem(2px) rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 .hero__top--bg {
-  width: 376px;
+  width: 100%;
   margin: auto;
 }
 .hero__bottom--bg {
-  width: 376px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,9 @@
 .hero__video {
   position: absolute;
   z-index: 1;
+  min-width: 380px;
+  max-height: 185px;
+  width: 100%;
 }
 .hero__top {
   position: relative;
@@ -38,7 +41,7 @@
   margin-left: calcRem(24px);
   position: relative;
   top: calcRem(56px);
-  z-index: 1;
+  z-index: 2;
 }
 .hero__title {
   color: $secondary;
