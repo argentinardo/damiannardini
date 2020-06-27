@@ -26,8 +26,8 @@
 .hero__video {
   position: absolute;
   z-index: 1;
-  min-width: 380px;
-  max-height: 185px;
+  min-width: calcRem(380px);
+  max-height: calcRem(185px);
   width: 100%;
 }
 .hero__top {

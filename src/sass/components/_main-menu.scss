@@ -26,14 +26,14 @@
 .main-menu__item {
   width: 100%;
   margin: calcRem(8px);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  border-radius: 6px;
-  border: $secondary 1px solid;
+  padding-top: calcRem(14px);
+  padding-bottom: calcRem(14px);
+  border-radius: calcRem(6px);
+  border: $secondary calcRem(1px) solid;
   color: $secondary;
   text-decoration: none;
   font-family: $title-font;
-  font-size: 18px;
+  font-size: calcRem(18px);
   display: block;
   text-align: center;
 }
