@@ -7,12 +7,11 @@
       </video>
       <div @click="openClose" class="hero__top">
         <main-menu :openState="openState" class="hero__menu"></main-menu>
-        <div class="hero__avatar">
-          <img
-            src="@/assets/images/avatar--notebook.svg"
-            alt="Bienvenidos!!!"
-          />
-        </div>
+        <img
+          class="hero__avatar"
+          src="@/assets/images/avatar--notebook.svg"
+          alt="Bienvenidos!!!"
+        />
         <div class="hero__dialog">Bienvenido!!!</div>
       </div>
     </div>
