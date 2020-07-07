@@ -2,11 +2,11 @@
   <div class="Drawing">
     <card flex="row">
       <tag
-        v-for="category in categories"
+        @click="tagFilter('category')"
+        v-for="category in getCategoryOnce"
         :key="category.index"
         :text="category"
         size="normal"
-        @activate="changeState()"
       ></tag>
     </card>
     <card>
@@ -33,19 +33,15 @@ export default {
   },
   data() {
     return {
-      categories: [
-        "ver todas",
-        "historietas",
-        "digital",
-        "caricaturas",
-        "objetos"
-      ],
+      show: {
+        images: true
+      },
       images: [
         {
           url() {
             return require("@/assets/images/drawings/aladin.jpg");
           },
-          tag: ["comic"],
+          tag: ["comic", "digital"],
           title: "Deseos",
           description: "Dibujo digital en tableta"
         },
@@ -53,7 +49,7 @@ export default {
           url() {
             return require("@/assets/images/drawings/arcade.jpg");
           },
-          tag: ["objetos"],
+          tag: ["objetos", "a mano"],
           title: "Arcade",
           description: "Dibujo sobre mueble arcade"
         },
@@ -61,12 +57,37 @@ export default {
           url() {
             return require("@/assets/images/drawings/gandhi.png");
           },
-          tag: ["caricatura"],
+          tag: ["caricatura", "digital"],
           title: "Nuevos tiempos",
           description: "Caricatura en lapiz"
         }
       ]
     };
+  },
+  methods: {
+    tagFilter(e) {
+      console.log(e);
+    },
+    showFull(e) {
+      console.log(e);
+    }
+  },
+  computed: {
+    getCategoryOnce() {
+      let categories = [];
+      this.images.forEach(image => {
+        image.tag.forEach(tag => {
+          categories.push(tag);
+        });
+      });
+      const categoriesNoDuplicate = categories.filter(
+        (el, index) => categories.indexOf(el) === index
+      );
+      return categoriesNoDuplicate;
+    },
+    filteredTag(tag) {
+      return this.categories.includes(tag);
+    }
   }
 };
 </script>
