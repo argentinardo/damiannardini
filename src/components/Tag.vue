@@ -1,6 +1,6 @@
 <template>
-  <div @click="activate" class="tag">
-    <span class="tag__text">
+  <div class="tag">
+    <span @click="tagSelected" class="tag__text">
       {{ text }}
     </span>
   </div>
@@ -10,8 +10,8 @@ export default {
   name: "Tag",
   props: ["text", "size"],
   methods: {
-    activate() {
-      this.$emit("changeState(text)");
+    tagSelected() {
+      this.$emit("selectingTag");
     }
   }
 };

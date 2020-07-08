@@ -2,7 +2,7 @@
   <div class="Drawing">
     <card flex="row">
       <tag
-        @click="tagFilter('category')"
+        @selectingTag="tagFilter(category)"
         v-for="category in getCategoryOnce"
         :key="category.index"
         :text="category"
@@ -36,6 +36,7 @@ export default {
       show: {
         images: true
       },
+      shownCategory: [],
       images: [
         {
           url() {
@@ -65,8 +66,8 @@ export default {
     };
   },
   methods: {
-    tagFilter(e) {
-      console.log(e);
+    tagFilter(element) {
+      this.shownCategory.push(element);
     },
     showFull(e) {
       console.log(e);
@@ -84,9 +85,6 @@ export default {
         (el, index) => categories.indexOf(el) === index
       );
       return categoriesNoDuplicate;
-    },
-    filteredTag(tag) {
-      return this.categories.includes(tag);
     }
   }
 };
