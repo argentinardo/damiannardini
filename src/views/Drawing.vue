@@ -12,7 +12,7 @@
     <card>
       <img
         class="drawing__image"
-        v-for="image in images"
+        v-for="image in filteredImages"
         :key="image.title"
         :alt="image.title"
         :src="image.url()"
@@ -42,7 +42,7 @@ export default {
           url() {
             return require("@/assets/images/drawings/aladin.jpg");
           },
-          tag: ["comic", "digital"],
+          tags: ["comic", "digital"],
           title: "Deseos",
           description: "Dibujo digital en tableta"
         },
@@ -50,7 +50,7 @@ export default {
           url() {
             return require("@/assets/images/drawings/arcade.jpg");
           },
-          tag: ["objetos", "a mano"],
+          tags: ["objetos", "a mano"],
           title: "Arcade",
           description: "Dibujo sobre mueble arcade"
         },
@@ -58,7 +58,7 @@ export default {
           url() {
             return require("@/assets/images/drawings/gandhi.png");
           },
-          tag: ["caricatura", "digital"],
+          tags: ["caricatura", "digital"],
           title: "Nuevos tiempos",
           description: "Caricatura en lapiz"
         }
@@ -67,7 +67,12 @@ export default {
   },
   methods: {
     tagFilter(element) {
-      this.shownCategory.push(element);
+      if (!this.shownCategory.includes(element)) {
+        this.shownCategory.push(element);
+      } else {
+        let currentIndex = this.shownCategory.indexOf(element);
+        this.shownCategory.splice(currentIndex, 1);
+      }
     },
     showFull(e) {
       console.log(e);
@@ -75,9 +80,9 @@ export default {
   },
   computed: {
     getCategoryOnce() {
-      let categories = [];
+      let categories = ["Mostrar todas"];
       this.images.forEach(image => {
-        image.tag.forEach(tag => {
+        image.tags.forEach(tag => {
           categories.push(tag);
         });
       });
@@ -85,7 +90,18 @@ export default {
         (el, index) => categories.indexOf(el) === index
       );
       return categoriesNoDuplicate;
+    },
+    filteredImages() {
+      var hola = this.images.filter( image => {
+        // image.tags.forEach(tag => {
+        //   return tag == "caricatura";
+        // })
+        image.tags.filter(tag => {
+          return tag == "caricatura";
+        })
+      })
+      return hola;
     }
   }
-};
+}
 </script>

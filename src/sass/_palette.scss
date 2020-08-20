@@ -1,12 +1,15 @@
 $primary: hsl(202, 34%, 15%);
+$secondary: hsl(208, 100%, 60%);
+$third: hsl(233, 22%, 84%);
+$fourth: hsl(23, 82%, 65%);
+
+
 $primary--light: lighten($primary, 15%); 
 $primary--dark: darken($primary, 15%); 
-$secondary: hsl(208, 100%, 60%);
 $secondary--light: lighten($secondary, 15%); 
-$third: hsl(233, 22%, 84%);
+$secondary--dark: darken($secondary, 15%); 
 $third--dark: darken($third, 15%);
 $third--light: lighten($third, 15%);
-$fourth: hsl(23, 82%, 65%);
 $fourth--dark: darken($fourth, 15%);
 $fourth--light: lighten($fourth, 15%);
 

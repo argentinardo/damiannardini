@@ -1,17 +1,18 @@
-.tag {
+.tag__text {
   border-radius: calcRem(6px);
-  border: solid calcRem(2px) $secondary;
-  color: $secondary;
-  padding: calcRem(8px);
+  border: solid calcRem(2px) $secondary--dark;
+  color: $secondary--dark;
   margin: calcRem(8px);
   font-weight: 600;
   &:hover {
-    color: $fourth--light;
-    border: solid calcRem(2px) $fourth--light;
+    color: $secondary;
+    border: solid calcRem(2px) $secondary;
     cursor: pointer;
   }
+  display: flex;
+  padding: calcRem(8px);
 }
 .tag--active {
-  border: solid calcRem(2px) $fourth;
-  color: $fourth;
+  border: solid calcRem(2px) $secondary--light;
+  color: $secondary--light;
 }
