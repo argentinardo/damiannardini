@@ -92,16 +92,18 @@ export default {
       return categoriesNoDuplicate;
     },
     filteredImages() {
-      var hola = this.images.filter( image => {
-        // image.tags.forEach(tag => {
-        //   return tag == "caricatura";
-        // })
-        image.tags.filter(tag => {
-          return tag == "caricatura";
-        })
-      })
-      return hola;
+      let showCatArray = [];
+      this.images.filter(image => {
+        for (let i = 0; i < image.tags.length; i++) {
+          for (let c = 0; c < this.shownCategory.length; c++) {
+            if (image.tags[i] == this.shownCategory[c]) {
+              showCatArray.push(image);
+            }
+          }
+        }
+      });
+      return showCatArray;
     }
   }
-}
+};
 </script>
