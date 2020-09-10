@@ -62,22 +62,22 @@ export default {
           title: "Batman de día",
           description: "Dibujo digital en tableta"
         },
-        {
-          url() {
-            return require("@/assets/images/drawings/remera.jpg");
-          },
-          tags: ["objetos", "a mano"],
-          title: "Dibujo abstracto",
-          description: "Dibujo sobre remera"
-        },
-        {
-          url() {
-            return require("@/assets/images/drawings/faro.jpg");
-          },
-          tags: ["objetos", "a mano"],
-          title: "Faro",
-          description: "Dibujo sobre zapatilla"
-        },
+        // {
+        //   url() {
+        //     return require("@/assets/images/drawings/remera.jpg");
+        //   },
+        //   tags: ["objetos", "a mano"],
+        //   title: "Dibujo abstracto",
+        //   description: "Dibujo sobre remera"
+        // },
+        // {
+        //   url() {
+        //     return require("@/assets/images/drawings/faro.jpg");
+        //   },
+        //   tags: ["objetos", "a mano"],
+        //   title: "Faro",
+        //   description: "Dibujo sobre zapatilla"
+        // },
         {
           url() {
             return require("@/assets/images/drawings/emoticon.jpg");
