@@ -56,6 +56,14 @@ export default {
         },
         {
           url() {
+            return require("@/assets/images/drawings/batman.png");
+          },
+          tags: ["comic", "digital"],
+          title: "Batman de día",
+          description: "Dibujo digital en tableta"
+        },
+        {
+          url() {
             return require("@/assets/images/drawings/remera.jpg");
           },
           tags: ["objetos", "a mano"],
@@ -104,7 +112,7 @@ export default {
         },
         {
           url() {
-            return require("@/assets/images/drawings/mandarin.png");
+            return require("@/assets/images/drawings/mandarin.jpg");
           },
           tags: ["comic", "digital"],
           title: "Mandarina y manzana",
@@ -112,7 +120,7 @@ export default {
         },
         {
           url() {
-            return require("@/assets/images/drawings/gandhi.png");
+            return require("@/assets/images/drawings/gandhi.jpg");
           },
           tags: ["caricatura", "a mano"],
           title: "Nuevos tiempos",
@@ -120,11 +128,75 @@ export default {
         },
         {
           url() {
-            return require("@/assets/images/drawings/elvira.png");
+            return require("@/assets/images/drawings/rebeco.jpg");
+          },
+          tags: ["caricatura", "a mano"],
+          title: "Joven con doodle art",
+          description: "Dibujo en lapiz"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/sol.jpg");
+          },
+          tags: ["a mano"],
+          title: "Paisaje",
+          description: "Dibujo en tinta"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/flor.jpg");
+          },
+          tags: ["a mano"],
+          title: "Flor triste",
+          description: "Dibujo en tinta"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/flores.jpg");
+          },
+          tags: ["a mano"],
+          title: "Flores astractas",
+          description: "Dibujo en tinta"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/nina.jpg");
+          },
+          tags: ["a mano"],
+          title: "Ornamentos",
+          description: "Dibujo en tinta"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/progreso.jpg");
+          },
+          tags: ["a mano"],
+          title: "'Progreso'",
+          description: "Dibujo en tinta"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/china.jpg");
           },
           tags: ["caricatura", "a mano"],
           title: "Yo hago puchero, ella hace puchero",
           description: "Fileteado porteño en lapiz"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/galeano.jpg");
+          },
+          tags: ["caricatura", "a mano"],
+          title: "Pensando latinoamerica",
+          description: "Caricatura a lapiz"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/lincoln.jpg");
+          },
+          tags: ["caricatura", "a mano"],
+          title: "Condena a buenos precidentes",
+          description: "Caricatura a lapiz"
         }
       ]
     };
