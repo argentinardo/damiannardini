@@ -56,11 +56,75 @@ export default {
         },
         {
           url() {
+            return require("@/assets/images/drawings/remera.jpg");
+          },
+          tags: ["objetos", "a mano"],
+          title: "Dibujo abstracto",
+          description: "Dibujo sobre remera"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/faro.jpg");
+          },
+          tags: ["objetos", "a mano"],
+          title: "Faro",
+          description: "Dibujo sobre zapatilla"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/emoticon.jpg");
+          },
+          tags: ["comic", "digital"],
+          title: "La vida de un emoticon",
+          description: "Dibujo digital en tablet"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/tucan.jpg");
+          },
+          tags: ["comic", "digital"],
+          title: "Tucan metro sexual",
+          description: "Dibujo digital en tablet"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/roboto.png");
+          },
+          tags: ["comic", "digital"],
+          title: "Roboto",
+          description: "Dibujo digital en tablet"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/redbull.jpg");
+          },
+          tags: ["comic", "digital"],
+          title: "Publicidad Engañosa",
+          description: "Dibujo digital en tablet"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/mandarin.png");
+          },
+          tags: ["comic", "digital"],
+          title: "Mandarina y manzana",
+          description: "Dibujo digital en tablet"
+        },
+        {
+          url() {
             return require("@/assets/images/drawings/gandhi.png");
           },
-          tags: ["caricatura", "digital"],
+          tags: ["caricatura", "a mano"],
           title: "Nuevos tiempos",
-          description: "Caricatura en lapiz"
+          description: "Dibujo en lapiz"
+        },
+        {
+          url() {
+            return require("@/assets/images/drawings/elvira.png");
+          },
+          tags: ["caricatura", "a mano"],
+          title: "Yo hago puchero, ella hace puchero",
+          description: "Fileteado porteño en lapiz"
         }
       ]
     };
@@ -74,8 +138,9 @@ export default {
         this.shownCategory.splice(currentIndex, 1);
       }
     },
-    showFull(e) {
-      console.log(e);
+    noRepeat(e) {
+      const unique = e.filter((el, index) => e.indexOf(el) === index);
+      return unique;
     }
   },
   computed: {
@@ -86,10 +151,7 @@ export default {
           categories.push(tag);
         });
       });
-      const categoriesNoDuplicate = categories.filter(
-        (el, index) => categories.indexOf(el) === index
-      );
-      return categoriesNoDuplicate;
+      return this.noRepeat(categories);
     },
     filteredImages() {
       let showCatArray = [];
@@ -102,7 +164,7 @@ export default {
           }
         }
       });
-      return showCatArray;
+      return this.noRepeat(showCatArray);
     }
   }
 };
