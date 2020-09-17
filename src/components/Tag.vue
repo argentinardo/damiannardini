@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "Tag",
-  props: ["text", "size"],
+  props: ["text", "size", "active"],
   data() {
     return {
       classTagActive: false

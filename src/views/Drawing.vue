@@ -3,10 +3,11 @@
     <card flex="row">
       <tag
         @selectingTag="tagFilter(category)"
-        v-for="category in getCategoryOnce"
+        v-for="category in allCategories"
         :key="category.index"
         :text="category"
         size="normal"
+        active="true"
       ></tag>
     </card>
     <card>
@@ -37,6 +38,7 @@ export default {
         images: true
       },
       shownCategory: [],
+      allCategories: [],
       images: [
         {
           url() {
@@ -204,7 +206,8 @@ export default {
   methods: {
     tagFilter(element) {
       if (!this.shownCategory.includes(element)) {
-        this.shownCategory.push(element);
+        this.shownCategory.unshift(element);
+        element.active = true;
       } else {
         let currentIndex = this.shownCategory.indexOf(element);
         this.shownCategory.splice(currentIndex, 1);
@@ -213,18 +216,22 @@ export default {
     noRepeat(e) {
       const unique = e.filter((el, index) => e.indexOf(el) === index);
       return unique;
-    }
-  },
-  computed: {
+    },
     getCategoryOnce() {
-      let categories = ["Mostrar todas"];
+      let categories = [];
       this.images.forEach(image => {
         image.tags.forEach(tag => {
           categories.push(tag);
         });
+        this.allCategories = this.noRepeat(categories); 
+        this.shownCategory = this.noRepeat(categories);
       });
-      return this.noRepeat(categories);
-    },
+    }
+  },
+  mounted(){
+    this.getCategoryOnce();
+  },
+  computed: {
     filteredImages() {
       let showCatArray = [];
       this.images.filter(image => {
