@@ -1,5 +1,5 @@
 <template>
-  <div class="Drawing">
+  <div class="drawing">
     <card flex="row">
       <tag
         @selectingTag="tagFilter(category)"
@@ -7,17 +7,23 @@
         :key="category.index"
         :text="category"
         size="normal"
-        active="true"
       ></tag>
     </card>
-    <card>
-      <img
-        class="drawing__image"
-        v-for="image in filteredImages"
-        :key="image.title"
-        :alt="image.title"
-        :src="image.url()"
-      />
+    <card
+      class="drawing__image-container"
+      v-for="image in filteredImages"
+      :key="image.title"
+    >
+      <template>
+        <img class="drawing__image" :alt="image.title" :src="image.url()" />
+      </template>
+      <template v-slot:slide> </template>
+      <image-slides
+        :url="image.url()"
+        :description="image.description"
+        :tags="image.tags"
+        :title="image.title"
+      ></image-slides>
     </card>
   </div>
 </template>
@@ -25,12 +31,14 @@
 <script>
 import Card from "@/components/Card.vue";
 import Tag from "@/components/Tag.vue";
+import ImageSlides from "@/components/ImageSlides.vue";
 
 export default {
   name: "Drawing",
   components: {
     Card,
-    Tag
+    Tag,
+    ImageSlides
   },
   data() {
     return {
@@ -197,7 +205,7 @@ export default {
             return require("@/assets/images/drawings/lincoln.jpg");
           },
           tags: ["caricatura", "a mano"],
-          title: "Condena a buenos precidentes",
+          title: "Condena a buenos presidentes",
           description: "Caricatura a lapiz"
         }
       ]
@@ -207,7 +215,6 @@ export default {
     tagFilter(element) {
       if (!this.shownCategory.includes(element)) {
         this.shownCategory.unshift(element);
-        element.active = true;
       } else {
         let currentIndex = this.shownCategory.indexOf(element);
         this.shownCategory.splice(currentIndex, 1);
@@ -223,12 +230,12 @@ export default {
         image.tags.forEach(tag => {
           categories.push(tag);
         });
-        this.allCategories = this.noRepeat(categories); 
+        this.allCategories = this.noRepeat(categories);
         this.shownCategory = this.noRepeat(categories);
       });
     }
   },
-  mounted(){
+  mounted() {
     this.getCategoryOnce();
   },
   computed: {

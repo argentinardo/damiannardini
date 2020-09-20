@@ -1,7 +1,7 @@
 .tag__text {
   border-radius: calcRem(6px);
-  border: solid calcRem(2px) $secondary--dark;
-  color: $secondary--dark;
+  border: solid calcRem(2px) $secondary;
+  color: $secondary;
   margin: calcRem(8px);
   font-weight: 600;
   &:hover {
@@ -12,7 +12,7 @@
   display: flex;
   padding: calcRem(8px);
 }
-.tag--active {
-  border: solid calcRem(2px) $secondary--light;
-  color: $secondary--light;
+.tag--disabled {
+  border: solid calcRem(2px) $gray-2;
+  color: $gray-2;
 }

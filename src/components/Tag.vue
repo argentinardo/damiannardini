@@ -1,6 +1,6 @@
 <template>
   <span
-    :class="{ 'tag--active': classTagActive, ' tag__text': true }"
+    :class="{ 'tag--disabled': classTagDisabled, ' tag__text': true }"
     @click="tagSelected"
   >
     {{ text }}
@@ -9,15 +9,15 @@
 <script>
 export default {
   name: "Tag",
-  props: ["text", "size", "active"],
+  props: ["text", "size"],
   data() {
     return {
-      classTagActive: false
+      classTagDisabled: false
     };
   },
   methods: {
     tagSelected() {
-      this.classTagActive = !this.classTagActive;
+      this.classTagDisabled = !this.classTagDisabled;
       this.$emit("selectingTag");
     }
   }

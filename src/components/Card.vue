@@ -1,6 +1,7 @@
 <template>
   <div class="card" :style="`flex-direction: ${flex}`">
     <slot></slot>
+    <slot name="slide"></slot>
   </div>
 </template>
 
