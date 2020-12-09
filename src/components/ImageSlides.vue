@@ -1,30 +1,36 @@
 <template>
-  <div class="image-slide" v-if="show">
-    <div class="image-slide__title">{{ title }}</div>
-    <div class="image-slide__prev"></div>
-    <img class="image-slide" :src="url" alt="" />
-    <div class="image-slide__next active"></div>
-    <div class="image-slide__description">{{ description }}</div>
-    <tag
-      class="tag__text--small"
-      v-for="el in tags"
-      :key="el.title"
-      :text="el"
-      size="normal"
-    ></tag>
+  <div class="container__slider" v-if="show">
+    <div
+      v-for="imageItem in imagesData"
+      :key="imageItem.title"
+      class="slider__image"
+    >
+      <div class="image__title">{{ imageItem.title }}</div>
+      <img class="image" :src="imageItem.url()" :alt="imageItem.title" />
+      <a href="#" class="image__button image__prev">anterior</a>
+      <a href="#" class="image__button image__next active">siguiente</a>
+      <div class="image__description">{{ imageItem.description }}</div>
+      <!-- <tag
+        class="tag__text--small"
+        v-for="el in tags"
+        :key="el.title"
+        :text="el"
+        size="normal"
+      ></tag> -->
+    </div>
   </div>
 </template>
 
 <script>
-import Tag from "../components/Tag";
+// import Tag from "../components/Tag";
 export default {
   data() {
     return {
-      show: false
+      show: true
     };
   },
   name: "ImageSlides",
-  components: { Tag },
-  props: ["visible", "tags", "title", "description", "url"]
+  // components: { Tag },
+  props: ["imagesData", "currentPosition"]
 };
 </script>

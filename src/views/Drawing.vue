@@ -15,16 +15,18 @@
       :key="image.title"
     >
       <template>
-        <img class="drawing__image" :alt="image.title" :src="image.url()" />
+        <img
+          @click="getPosition(filteredImages.indexOf(image))"
+          class="drawing__image"
+          :alt="image.title"
+          :src="image.url()"
+        />
       </template>
-      <template v-slot:slide> </template>
-      <image-slides
-        :url="image.url()"
-        :description="image.description"
-        :tags="image.tags"
-        :title="image.title"
-      ></image-slides>
     </card>
+    <image-slides
+      :currentPosition="imagePosition"
+      :imagesData="filteredImages"
+    ></image-slides>
   </div>
 </template>
 
@@ -47,6 +49,7 @@ export default {
       },
       shownCategory: [],
       allCategories: [],
+      imagePosition: Number,
       images: [
         {
           url() {
@@ -212,6 +215,9 @@ export default {
     };
   },
   methods: {
+    getPosition(e) {
+      this.imagePosition = e;
+    },
     tagFilter(element) {
       if (!this.shownCategory.includes(element)) {
         this.shownCategory.unshift(element);
@@ -255,3 +261,4 @@ export default {
   }
 };
 </script>
+
